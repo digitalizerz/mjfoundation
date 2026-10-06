@@ -8,7 +8,11 @@ export const home = {
     body: "Building resilience, creating opportunity and strengthening communities through mental wellness, mentorship and sport.",
     cta: { label: "Explore the foundation", href: "/about" },
     script: "More than a Champion.",
-    image: { ...images.hero, objectPosition: "center 16%" },
+    image: {
+      ...images.hero,
+      src: "/images/mj-rockets-hero.jpg",
+      objectPosition: "center 42%",
+    },
   },
   mission: {
     title: ["The game can", "change a life.", "So can someone", "believing in you."],

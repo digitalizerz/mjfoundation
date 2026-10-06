@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
 
-export const metadata: Metadata = { title: "Privacy" };
+import { pageSeo } from "@/content/seo";
+
+export const metadata: Metadata = {
+  title: pageSeo.privacy.title,
+  description: pageSeo.privacy.description,
+  alternates: { canonical: "/privacy" },
+};
 
 export default function PrivacyPage() {
   return (

@@ -4,11 +4,12 @@ import { ProgramCard } from "@/components/ProgramCard";
 import { CTASection } from "@/components/CTASection";
 import { images } from "@/content/images";
 import { programs } from "@/content/programs";
+import { pageSeo } from "@/content/seo";
 
 export const metadata: Metadata = {
-  title: "Programs",
-  description:
-    "Mind of a Champion, the Mike James Basketball Experience, education and mentorship, and Mike James Day.",
+  title: pageSeo.programs.title,
+  description: pageSeo.programs.description,
+  alternates: { canonical: "/programs" },
 };
 
 export default function ProgramsPage() {

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Barlow_Condensed, Great_Vibes, Instrument_Serif, Manrope } from "next/font/google";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import { organizationJsonLd, seo } from "@/content/seo";
 import { site } from "@/content/site";
 import "./globals.css";
 
@@ -37,17 +38,28 @@ const script = Great_Vibes({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.name} · Building Stronger Minds`,
+    default: seo.title,
     template: `%s · ${site.name}`,
   },
-  description: site.description,
+  description: seo.description,
+  keywords: [...seo.keywords],
   applicationName: site.name,
+  category: "nonprofit",
+  robots: { index: true, follow: true },
   openGraph: {
-    title: site.name,
-    description: site.description,
+    title: seo.title,
+    description: seo.description,
     type: "website",
-    images: [{ url: "/brand/mj-lockup.jpg", alt: "Mike James Foundation monogram and name" }],
+    url: site.url,
+    locale: "en_US",
+    images: [{ url: seo.image.url, alt: seo.image.alt }],
     siteName: site.name,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: seo.title,
+    description: seo.description,
+    images: [seo.image.url],
   },
 };
 
@@ -55,6 +67,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en" className={`${display.variable} ${sans.variable} ${serif.variable} ${script.variable}`}>
       <body>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd()) }} />
         <a className="skip-link" href="#main">
           Skip to content
         </a>

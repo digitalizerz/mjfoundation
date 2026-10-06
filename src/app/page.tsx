@@ -1,10 +1,21 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { HomeMotion } from "@/components/HomeMotion";
 import { MediaFrame } from "@/components/MediaFrame";
 import { ButtonLink } from "@/components/TextLink";
 import { home } from "@/content/home";
 import { lovejoyScreens } from "@/content/lovejoy";
+import { seo } from "@/content/seo";
 import "./home.css";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+  openGraph: {
+    title: seo.title,
+    description: seo.description,
+    url: "/",
+  },
+};
 
 const screen = lovejoyScreens.community;
 

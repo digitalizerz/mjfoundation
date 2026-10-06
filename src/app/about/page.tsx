@@ -8,11 +8,13 @@ import { RoleStrip } from "@/components/RoleStrip";
 import { TextLink } from "@/components/TextLink";
 import { images } from "@/content/images";
 import { pillars } from "@/content/programs";
+import { pageSeo } from "@/content/seo";
 import { mission, philosophy, values, vision } from "@/content/site";
 
 export const metadata: Metadata = {
-  title: "About",
-  description: mission,
+  title: pageSeo.about.title,
+  description: pageSeo.about.description,
+  alternates: { canonical: "/about" },
 };
 
 const archive = [images.portrait, images.story, images.camp, images.brotherhood, images.community];

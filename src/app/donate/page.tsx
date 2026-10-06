@@ -3,9 +3,12 @@ import { DonationForm } from "@/components/DonationForm";
 import { PageHero } from "@/components/PageHero";
 import { images } from "@/content/images";
 
+import { pageSeo } from "@/content/seo";
+
 export const metadata: Metadata = {
-  title: "Donate",
-  description: "Support the Mike James Foundation with a one-time or monthly gift.",
+  title: pageSeo.donate.title,
+  description: pageSeo.donate.description,
+  alternates: { canonical: "/donate" },
 };
 
 export default function DonatePage() {

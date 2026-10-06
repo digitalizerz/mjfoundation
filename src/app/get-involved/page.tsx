@@ -4,10 +4,12 @@ import { PageHero } from "@/components/PageHero";
 import { TextLink } from "@/components/TextLink";
 import { images } from "@/content/images";
 import { pathways } from "@/content/involvement";
+import { pageSeo } from "@/content/seo";
 
 export const metadata: Metadata = {
-  title: "Get Involved",
-  description: "Donate, volunteer, mentor, or bring a Mike James Foundation program to your community.",
+  title: pageSeo.getInvolved.title,
+  description: pageSeo.getInvolved.description,
+  alternates: { canonical: "/get-involved" },
 };
 
 export default async function GetInvolvedPage({

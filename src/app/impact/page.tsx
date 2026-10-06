@@ -3,10 +3,12 @@ import { ImpactStat } from "@/components/ImpactStat";
 import { PageHero } from "@/components/PageHero";
 import { annualReports, featuredImpact, impactAreas } from "@/content/impact";
 import { images } from "@/content/images";
+import { pageSeo } from "@/content/seo";
 
 export const metadata: Metadata = {
-  title: "Our Impact",
-  description: featuredImpact.body,
+  title: pageSeo.impact.title,
+  description: pageSeo.impact.description,
+  alternates: { canonical: "/impact" },
 };
 
 export default function ImpactPage() {

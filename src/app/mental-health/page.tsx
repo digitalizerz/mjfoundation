@@ -5,9 +5,17 @@ import { StoreButtons } from "@/components/StoreButtons";
 import { lovejoyScreens } from "@/content/lovejoy";
 import { mentalHealth } from "@/content/mental-health";
 
+import { pageSeo } from "@/content/seo";
+
 export const metadata: Metadata = {
-  title: { absolute: mentalHealth.title },
-  description: mentalHealth.description,
+  title: { absolute: pageSeo.mentalHealth.title },
+  description: pageSeo.mentalHealth.description,
+  alternates: { canonical: "/mental-health" },
+  openGraph: {
+    title: pageSeo.mentalHealth.title,
+    description: pageSeo.mentalHealth.description,
+    url: "/mental-health",
+  },
 };
 
 export default function MentalHealthPage() {

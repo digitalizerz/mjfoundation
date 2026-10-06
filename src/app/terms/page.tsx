@@ -1,7 +1,13 @@
 import type { Metadata } from "next";
 import { legal } from "@/content/site";
 
-export const metadata: Metadata = { title: "Terms" };
+import { pageSeo } from "@/content/seo";
+
+export const metadata: Metadata = {
+  title: pageSeo.terms.title,
+  description: pageSeo.terms.description,
+  alternates: { canonical: "/terms" },
+};
 
 export default function TermsPage() {
   return (
