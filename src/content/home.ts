@@ -10,8 +10,9 @@ export const home = {
     script: "More than a Champion.",
     image: {
       ...images.hero,
-      src: "/images/mj-rockets-hero.jpg",
-      objectPosition: "center 42%",
+      src: "/images/mj-community-hero.jpg",
+      alt: "Mike James, at right, with community members at a Hoodies 4 Healing gathering.",
+      objectPosition: "right center",
     },
   },
   mission: {

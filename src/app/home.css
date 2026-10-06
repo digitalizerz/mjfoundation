@@ -33,17 +33,17 @@
 
 .home-hero-img {
   object-fit: cover;
-  object-position: center 42%;
+  object-position: right center;
   transform: none;
   transition: none;
   animation: none;
-  filter: saturate(0.72) contrast(1.06) brightness(0.78);
+  filter: saturate(0.88) contrast(1.04) brightness(0.9);
 }
 
 .home-hero-shade {
   background:
-    linear-gradient(90deg, rgba(8, 16, 20, 0.94) 0%, rgba(8, 16, 20, 0.78) 30%, rgba(8, 16, 20, 0.46) 58%, rgba(8, 16, 20, 0.58) 100%),
-    linear-gradient(180deg, rgba(8, 16, 20, 0.62) 0%, transparent 24%, transparent 68%, rgba(8, 16, 20, 0.72) 100%);
+    linear-gradient(90deg, rgba(8, 16, 20, 0.92) 0%, rgba(8, 16, 20, 0.72) 28%, rgba(8, 16, 20, 0.28) 52%, rgba(8, 16, 20, 0.22) 100%),
+    linear-gradient(180deg, rgba(8, 16, 20, 0.45) 0%, transparent 22%, transparent 72%, rgba(8, 16, 20, 0.55) 100%);
 }
 
 .home-hero-shade::after {
