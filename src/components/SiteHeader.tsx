@@ -21,7 +21,7 @@ export function SiteHeader() {
 
   useEffect(() => {
     const onScroll = () => {
-      const threshold = pathname === "/" ? window.innerHeight * 0.72 : 8;
+      const threshold = pathname === "/" || pathname === "/about" || pathname === "/programs" ? window.innerHeight * 0.72 : 8;
       setScrolled(window.scrollY > threshold);
     };
     onScroll();

@@ -22,9 +22,9 @@ export const mentalHealth = {
     title: "A conversation, then a way forward.",
     paragraphs: [
       "Through Mind of a Champion, Mike makes room for honest talk about pressure, adversity, identity, and life beyond the game.",
-      "The foundation does not provide therapy. LoveJoy is the care-access partner. Inside the patient app, The Porch is where people join Mike James' community.",
+      "Mike uses Mind of a Champion to start the conversation. LoveJoy Health is the care-access partner. Inside the patient app, The Porch is where people join Mike James' community.",
     ],
-    note: "The app is not emergency care, and it is not a therapist. If you are in crisis, call or text 988 in the United States.",
+    note: "If you are in crisis, call or text 988 in the United States, or contact local emergency services. The app is a way to find ongoing support.",
   },
   next: {
     ios: "Download on the App Store",

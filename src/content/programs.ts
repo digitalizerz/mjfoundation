@@ -77,7 +77,7 @@ const loveJoyNote: ProgramBlock = {
   paragraphs: [
     "Talking about mental health is important. Making it easier for people to find and stay connected to support is just as important.",
     "LoveJoy Health is the care-access partner for Mind of a Champion. The partnership can connect people to mental-health resources, assessments, care navigation, and appropriate professional support.",
-    "The partnership is not emergency care, not a clinic operated by the foundation, and not a substitute for a licensed clinician. Nothing on this site describes a tool as therapy or promises a medical outcome.",
+    "LoveJoy connects people to resources, care navigation, and licensed clinicians. In a crisis, call or text 988. What you read here is education and a way to reach support.",
   ],
   cta: { label: "Explore mental health & wellness", href: "/mental-health" },
 };
@@ -104,11 +104,11 @@ export const programs: Program[] = [
       },
       {
         title: "School and team programming",
-        description: "Sessions designed to travel to schools, clubs, and teams — not only to a single camp.",
+        description: "Sessions that can travel to a school, a club, or a team.",
       },
       {
         title: "Youth mental-health education",
-        description: "Language young people can actually use. No shame. No clinical jargon for its own sake.",
+        description: "Language young people already use.",
       },
       {
         title: "Parent and coach resources",
@@ -125,7 +125,7 @@ export const programs: Program[] = [
     },
     secondaryCta: {
       label: "Bring Mind of a Champion to your organization",
-      href: "/get-involved",
+      href: "/contact?interest=program#contact-form",
     },
     gallery: [images.mind, images.pillarMind, images.classroom, images.partnership],
     video: {
@@ -140,7 +140,7 @@ export const programs: Program[] = [
         title: "Pressure does not end when the final horn sounds.",
         paragraphs: [
           "Young athletes are asked to perform, to represent, and to keep their composure while their lives are still being built. School, family, money, identity, and the game can all land at once.",
-          "Mind of a Champion exists so mental and emotional skill is trained with the same seriousness as a jump shot. The program is education, conversation, and connection. It is not treatment, and it does not diagnose.",
+          "Mind of a Champion exists so mental and emotional skill is trained with the same seriousness as a jump shot. The work is education, conversation, and a connection to care.",
         ],
         image: images.pillarMind,
       },
@@ -149,7 +149,7 @@ export const programs: Program[] = [
         eyebrow: "Program philosophy",
         title: "Strength includes knowing when to reach.",
         paragraphs: [
-          "The philosophy is simple: resilience is real, and so is support. We do not romanticize struggle, and we do not treat silence as toughness.",
+          "Resilience is real, and so is support. Sessions ask young people to name what they feel and to know where to turn.",
           "Sessions are built to be direct, age-aware, and hopeful. The goal is a young person who can name what they feel, stay in the work, and know where to turn.",
         ],
       },
@@ -177,11 +177,11 @@ export const programs: Program[] = [
           },
           {
             title: "Resources",
-            description: "Plain-language materials people can keep. They inform. They do not prescribe care.",
+            description: "Plain-language materials people can keep and share.",
           },
           {
             title: "Care connections",
-            description: "When education is not the whole need, the program can point toward professional support and care navigation.",
+            description: "When a young person needs more than a workshop, the program can point toward professional support and care navigation.",
           },
         ],
       },
@@ -195,7 +195,7 @@ export const programs: Program[] = [
     headline: "The game teaches more than the game.",
     summary:
       "Mike founded the Mike James Basketball Experience in Houston for youth, high-school, and collegiate athletes. The foundation picks up that work: player development, leadership, mentorship, and the life skills that travel past the court.",
-    lede: "This is not a camp invented because Mike played in the NBA. It is the next form of a program he already built, coached, and used to develop young athletes.",
+    lede: "Mike built this program in Houston, coached it, and used it to develop young athletes. The foundation is picking that work back up.",
     image: images.camp,
     hero: images.camp,
     areas: [
@@ -203,13 +203,13 @@ export const programs: Program[] = [
       { title: "Leadership", description: "How to carry a group: voice, effort, and the standard when the drill gets hard." },
       { title: "Mentorship", description: "Time with coaches who treat the person as seriously as the player." },
       { title: "Mental performance", description: "Focus, pressure, and the mind that has to travel with the body." },
-      { title: "Education", description: "Academics beside the workouts. School is part of development, not a footnote." },
+      { title: "Education", description: "School sits beside the workouts. Academics are part of how a player develops." },
       { title: "Life skills", description: "Nutrition, preparation, character, and habits that still matter off the court." },
     ],
     cta: { label: "Explore the Basketball Experience", href: "/programs/basketball-experience" },
     secondaryCta: {
       label: "Get involved",
-      href: "/get-involved",
+      href: "/contact?interest=volunteer#contact-form",
     },
     gallery: [images.camp, images.story, images.portrait, images.brotherhood],
     video: {
@@ -249,7 +249,7 @@ export const programs: Program[] = [
           },
           {
             title: "Mental performance",
-            description: "The mind under pressure, in conversation with Mind of a Champion. Education, not treatment.",
+            description: "The mind under pressure, in conversation with Mind of a Champion.",
           },
           {
             title: "Education and life skills",
@@ -260,7 +260,7 @@ export const programs: Program[] = [
       {
         type: "note",
         eyebrow: "Championship Camp",
-        title: "A camp can live here. It is not the whole program.",
+        title: "Championship Camp is one gathering inside the program.",
         paragraphs: [
           "A Mike James Championship Camp may return as one gathering inside the Basketball Experience: instruction, mentorship, leadership, and conversations about life beyond the game.",
           "No camp date, city, or guest list is published on this site.",
@@ -288,7 +288,7 @@ export const programs: Program[] = [
     headline: "Education has always been part of the work.",
     summary:
       "Helping young people access mentors, education, experiences, and opportunities that expand what is possible for their futures.",
-    lede: "Mike chaired the Mike James Scholarship Foundation & Fund, which helped at-risk students from disenfranchised communities seek financial assistance for post-secondary education. Mentorship and education are a continuation of that commitment, not a new invention.",
+    lede: "Mike chaired the Mike James Scholarship Foundation & Fund, which helped at-risk students from disenfranchised communities seek financial assistance for post-secondary education. Mentorship and education carry that same commitment forward.",
     image: images.pillarYouth,
     hero: images.pillarYouth,
     areas: [
@@ -316,7 +316,7 @@ export const programs: Program[] = [
     cta: { label: "Explore education & mentorship", href: "/programs/education-mentorship" },
     secondaryCta: {
       label: "Become a mentor",
-      href: "/get-involved",
+      href: "/contact?interest=mentor#contact-form",
     },
     gallery: [images.pillarYouth, images.classroom, images.youthCircle],
     video: null,
@@ -327,7 +327,7 @@ export const programs: Program[] = [
         title: "Scholarships were part of his community life.",
         paragraphs: [
           "As chairman of the Mike James Scholarship Foundation & Fund, Mike helped at-risk students from disenfranchised communities obtain financial assistance to pursue post-secondary education.",
-          "The Mike James Foundation carries that interest forward through mentorship, college preparation, career exposure, and life skills. It does not mean a scholarship is open today. No award amount, deadline, or application is published until one is confirmed.",
+          "The Mike James Foundation carries that interest forward through mentorship, college preparation, career exposure, and life skills. When a scholarship opens, the amount, deadline, and application will be posted here.",
         ],
         image: images.classroom,
       },
@@ -335,7 +335,7 @@ export const programs: Program[] = [
         type: "areas",
         eyebrow: "What can grow here",
         title: "The shape of the work.",
-        intro: "These are directions, not a catalog of programs already enrolling. Nothing below is a count of students funded or mentors matched.",
+        intro: "Where the work can go. Counts of students and mentors will be published when they are real.",
         items: [
           {
             title: "Mentorship",
@@ -343,11 +343,11 @@ export const programs: Program[] = [
           },
           {
             title: "College preparation",
-            description: "Guidance that treats school as the opportunity, not a backup plan.",
+            description: "Guidance that treats school as the opportunity in front of a young person.",
           },
           {
             title: "Career exposure",
-            description: "Time in workplaces and rooms a young person would not otherwise enter.",
+            description: "Time in workplaces and rooms that are usually hard for a young person to reach.",
           },
           {
             title: "Financial literacy",
@@ -362,9 +362,9 @@ export const programs: Program[] = [
       {
         type: "note",
         eyebrow: "Scholarships",
-        title: "History, not an open application.",
+        title: "The scholarship record.",
         paragraphs: [
-          "The scholarship fund is part of Mike's record. This page does not announce scholarships currently available.",
+          "The scholarship fund is part of Mike's record. A current application will be posted when an award is open.",
         ],
       },
     ],
@@ -377,7 +377,7 @@ export const programs: Program[] = [
     headline: "Showing up matters.",
     summary:
       "A community tradition built around bringing people together, creating opportunities, and supporting families.",
-    lede: "Mike James Day began as a community event Mike hosted for residents of Amityville, New York. The foundation is reviving that idea, not inventing a generic community day.",
+    lede: "Mike James Day began as a community event Mike hosted for residents of Amityville, New York. The foundation is bringing that day back for a neighborhood.",
     image: images.community,
     hero: images.community,
     areas: [
@@ -386,25 +386,25 @@ export const programs: Program[] = [
       { title: "School resources", description: "Practical help for the school year, when a partner makes it possible." },
       { title: "Food", description: "Food alongside the day, offered with dignity." },
       { title: "Wellness", description: "Health information people can use the same week." },
-      { title: "Mental-health resources", description: "Awareness and a path toward support. Not a pop-up clinic." },
+      { title: "Mental-health resources", description: "Awareness and a path toward support people can use after the day." },
       { title: "Mentors", description: "Conversations that can continue after the day ends." },
-      { title: "Local organizations", description: "Neighborhood groups at the table, not logos on a banner only." },
+      { title: "Local organizations", description: "Neighborhood groups in the room, talking with families." },
     ],
     cta: { label: "Explore Mike James Day", href: "/programs/mike-james-day" },
     secondaryCta: {
       label: "Partner on Mike James Day",
-      href: "/get-involved",
+      href: "/contact?interest=community-org#contact-form",
     },
     gallery: [images.community, images.pillarYouth, images.youthCircle, images.runners],
     video: null,
     blocks: [
       {
         type: "prose",
-        eyebrow: "A tradition, not a new idea",
+        eyebrow: "Where it started",
         title: "Amityville was the first version.",
         paragraphs: [
           "Mike hosted Mike James Day in Amityville, New York, a community event for local residents. Showing up for a neighborhood was already part of how he used his platform.",
-          "The foundation's Mike James Day is that tradition, widened: basketball, family, wellness, and community in one day. He has also stood with efforts such as Hoodies 4 Healing. That photograph is participation, not a claim that the foundation runs those organizations.",
+          "The foundation's Mike James Day is that tradition, widened: basketball, family, wellness, and community in one day. He has also stood with efforts such as Hoodies 4 Healing. The photograph shows him there. Hoodies 4 Healing remains its own organization.",
         ],
         image: images.community,
       },
@@ -412,19 +412,14 @@ export const programs: Program[] = [
         type: "areas",
         eyebrow: "What a day can hold",
         title: "Basketball. Family. Wellness. Community.",
-        intro: "Not every gathering will include every piece. This is the menu for a future Mike James Day, not a report of an event already produced by the foundation.",
+        intro: "A future Mike James Day can draw from this list. What shows up depends on the neighborhood and the partners in the room.",
         items: [
           { title: "Youth basketball", description: "Open play and instruction across ages and skill." },
           { title: "Families", description: "Space for parents, siblings, and caregivers to be part of the day." },
           { title: "School resources and food", description: "Supplies and food coordinated with local partners, when those partners are confirmed." },
-          { title: "Wellness and mental health", description: "Information and pathways to support. Not emergency care and not a clinic on the blacktop." },
+          { title: "Wellness and mental health", description: "Information and a path toward support. In a crisis, call or text 988." },
           { title: "Mentors, athletes, and local groups", description: "People in the room, including businesses and organizations from the neighborhood." },
         ],
-      },
-      {
-        type: "gallery",
-        title: "Showing up",
-        intro: "The gathering photograph is Mike James with Hoodies 4 Healing. The other frames are supporting images until a new Mike James Day is photographed.",
       },
     ],
   },

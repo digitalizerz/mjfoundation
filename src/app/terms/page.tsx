@@ -17,7 +17,7 @@ export default function TermsPage() {
         {legal.legalName} is a Texas domestic nonprofit corporation, file no. {legal.fileNumber}, formed {legal.formed} and effective {legal.effective}. The certificate of formation states the purpose as mental health awareness. EIN {legal.ein}.
       </p>
       <p>
-        Nothing on this site is medical, clinical, or emergency advice. Gifts are not described here as tax-deductible.
+        This site offers education and a way to reach the foundation. For a crisis, call or text 988. A gift is not called tax-deductible on this site.
       </p>
     </article>
   );

@@ -1,15 +1,9 @@
 import type { Metadata } from "next";
-import { EditorialSection } from "@/components/EditorialSection";
-import { JourneyTimeline } from "@/components/JourneyTimeline";
-import { PageHero } from "@/components/PageHero";
-import { PhotoGallery } from "@/components/PhotoGallery";
-import { PillarCard } from "@/components/PillarCard";
-import { RoleStrip } from "@/components/RoleStrip";
-import { TextLink } from "@/components/TextLink";
+import Image from "next/image";
+import Link from "next/link";
 import { images } from "@/content/images";
-import { pillars } from "@/content/programs";
 import { pageSeo } from "@/content/seo";
-import { mission, philosophy, values, vision } from "@/content/site";
+import "./about.css";
 
 export const metadata: Metadata = {
   title: pageSeo.about.title,
@@ -17,154 +11,261 @@ export const metadata: Metadata = {
   alternates: { canonical: "/about" },
 };
 
-const archive = [images.portrait, images.story, images.camp, images.brotherhood, images.community];
+const journey = [
+  {
+    kicker: "Duquesne",
+    title: "Student-athlete",
+    body: "Graduated in 1998 in child psychology and communication. First-team All-Atlantic 10.",
+  },
+  {
+    kicker: "2004",
+    title: "NBA Champion",
+    body: "A championship with the Detroit Pistons, after an undrafted and international road.",
+  },
+  {
+    kicker: "Houston",
+    title: "Coach and mentor",
+    body: "Founded and coached the Mike James Basketball Experience from 2005 to 2013.",
+  },
+  {
+    kicker: "Today",
+    title: "Mike James Foundation",
+    body: "Wellness, education, mentorship, basketball, and community. LoveJoy Health is the care-access partner.",
+  },
+];
+
+const marks = [
+  {
+    title: "Mental wellness",
+    body: "Emotional resilience and a path toward real support.",
+  },
+  {
+    title: "Education",
+    body: "Mentors and learning, continuing scholarship work already in Mike’s record.",
+  },
+  {
+    title: "The game",
+    body: "Basketball as a classroom for discipline and life off the court.",
+  },
+  {
+    title: "Community",
+    body: "Neighborhoods where Mike has shown up, and where the work goes next.",
+  },
+];
+
+const programs = [
+  {
+    title: "Mentorship",
+    body: "A consistent adult beside a young person. Screening comes before anyone is matched.",
+    href: "/programs/education-mentorship",
+    image: images.pillarYouth,
+  },
+  {
+    title: "Mental health & wellness",
+    body: "Mind of a Champion makes room to talk about pressure, setbacks, and life beyond the game.",
+    href: "/programs/mind-of-a-champion",
+    image: images.mind,
+  },
+  {
+    title: "Education & scholarships",
+    body: "College preparation, career exposure, and the scholarship fund Mike has already chaired.",
+    href: "/programs/education-mentorship",
+    image: images.classroom,
+  },
+  {
+    title: "Community programs",
+    body: "Mike James Day brings basketball, family, wellness, and the neighborhood into one day.",
+    href: "/programs/mike-james-day",
+    image: images.community,
+  },
+];
 
 export default function AboutPage() {
   return (
-    <>
-      <PageHero
-        eyebrow={philosophy.eyebrow}
-        title={philosophy.title}
-        lede={philosophy.body}
-        image={images.about}
-      />
-
-      <RoleStrip />
-
-      <EditorialSection
-        eyebrow="Mike James"
-        title="He has been doing the work."
-        paragraphs={[
-          "Mike James did not finish basketball and then decide to start helping people. Coaching, training, mentorship, scholarships, and community events were already part of his life as a professional athlete.",
-          "He is an NBA Champion. He is also a coach, a trainer, a mentor, and a community leader. The path was undrafted and international before it became a long NBA career, including a championship with the Detroit Pistons in 2004.",
-          "At Duquesne University he earned a degree in child psychology and communication. That study sits behind a long interest in how young people grow. It is not clinical training, and this foundation does not offer therapy.",
-          "He has described his standard in plain terms: sportsmanship, teamwork, respect, character, work ethic, and personal integrity, with faith as part of how he carries that standard. The aim is success on the court and off it.",
-          "The Mike James Foundation is the next chapter of that record. The same commitments, held in one place, with mental health and wellness as a signature focus through the partnership with LoveJoy Health.",
-        ]}
-        image={images.portrait}
-      />
-
-      <section className="band" aria-labelledby="journey-heading">
-        <div className="section-intro">
-          <p className="eyebrow">The journey</p>
-          <h2 id="journey-heading">From the court to the work.</h2>
-          <p>A life in chapters. Not a list of every team, and not a statistics page.</p>
-        </div>
-        <JourneyTimeline />
-      </section>
-
-      <section className="band" aria-labelledby="why-heading">
-        <div className="section-intro">
-          <p className="eyebrow">Why the foundation exists</p>
-          <h2 id="why-heading">A legacy of giving back. A new chapter of impact.</h2>
+    <div className="about-redesign">
+      <section className="about-hero" aria-labelledby="about-heading">
+        <div className="about-hero-copy">
+          <p className="about-kicker">The foundation</p>
+          <h1 id="about-heading">
+            Building stronger
+            <br />
+            futures.
+          </h1>
           <p>
-            Basketball created opportunities for Mike. He has spent years creating opportunities for others: young athletes in Houston, students seeking help with school, and neighbors at Mike James Day in Amityville.
+            The Mike James Foundation creates opportunities for young people through mentorship, mental wellness, education, basketball, and community.
           </p>
-          <p>
-            The foundation brings mental wellness, education, mentorship, basketball, and community under one long-term mission. Mental health is the signature expanding focus. It is not the only purpose.
+          <div className="about-actions">
+            <Link className="about-btn" href="/donate">
+              Donate
+            </Link>
+            <Link className="about-btn is-ghost" href="/programs">
+              Our programs
+            </Link>
+          </div>
+        </div>
+        <div className="about-hero-photo">
+          <Image
+            src={images.portrait.src}
+            alt={images.portrait.alt}
+            fill
+            priority
+            sizes="(min-width: 960px) 48vw, 100vw"
+            style={{ objectPosition: "center 16%" }}
+          />
+          <p className="about-sign" aria-hidden="true">
+            Mike James
           </p>
         </div>
       </section>
 
-      <section className="mission-band" aria-label="Mission and vision">
-        <article className="mission-card">
-          <p className="eyebrow">Mission</p>
-          <h2>What we do</h2>
-          <p>{mission}</p>
-        </article>
-        <article className="mission-card">
-          <p className="eyebrow">Vision</p>
-          <h2>What we see</h2>
-          <p>{vision}</p>
-        </article>
+      <section className="about-people" aria-labelledby="people-heading">
+        <div className="about-people-photo">
+          <Image
+            src={images.community.src}
+            alt={images.community.alt}
+            fill
+            sizes="(min-width: 960px) 46vw, 100vw"
+            style={{ objectPosition: "72% top" }}
+          />
+          <Image className="about-people-mark" src="/brand/mj-mark.png" alt="" width={433} height={336} />
+        </div>
+        <div className="about-people-copy">
+          <p className="about-kicker">About Mike</p>
+          <h2 id="people-heading">More than basketball.</h2>
+          <p>
+            Mike James is an NBA champion, and he is also a coach, a trainer, a mentor, and a community leader. The playing career, including a championship with the Detroit Pistons in 2004, opened into the work he was already doing off the floor.
+          </p>
+          <p>
+            At Duquesne he studied child psychology and communication. While he was still playing, he coached young athletes in Houston, chaired a scholarship fund, and hosted Mike James Day for neighbors in Amityville.
+          </p>
+        </div>
       </section>
 
-      <section className="value-band" aria-labelledby="values-heading">
-        <div className="section-intro">
-          <p className="eyebrow">Our values</p>
-          <h2 id="values-heading">How the work is held</h2>
-          <p>These follow the standard Mike has coached by: character, work, and belief in a young person before the result is obvious.</p>
+      <section className="about-journey" aria-labelledby="journey-heading">
+        <div className="about-journey-copy">
+          <h2 id="journey-heading">
+            From the court
+            <br />
+            to the community.
+          </h2>
+          <p className="about-journey-lede">The career led into coaching, mentoring, and showing up for a neighborhood.</p>
+          <ol>
+            {journey.map((step) => (
+              <li key={step.kicker}>
+                <span>{step.kicker}</span>
+                <div>
+                  <h3>{step.title}</h3>
+                  <p>{step.body}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
         </div>
-        <ol className="value-list">
-          {values.map((value) => (
-            <li key={value.title}>
-              <h3>{value.title}</h3>
-              <p>{value.body}</p>
+        <div className="about-journey-photo">
+          <Image
+            src={images.runners.src}
+            alt={images.runners.alt}
+            fill
+            sizes="(min-width: 960px) 48vw, 100vw"
+            style={{ objectPosition: "center 30%" }}
+          />
+        </div>
+      </section>
+
+      <section className="about-why" aria-labelledby="why-heading">
+        <p className="about-kicker">Why the foundation exists</p>
+        <h2 id="why-heading">Giving back has always been part of the journey.</h2>
+        <p>
+          The Houston program, the scholarship fund, and Mike James Day were already how Mike used the platform while the career was still going. The foundation holds that same work in one place for the young people coming up now.
+        </p>
+      </section>
+
+      <section className="about-programs" aria-labelledby="programs-heading">
+        <div className="about-programs-intro">
+          <h2 id="programs-heading">Supporting young people where it matters most.</h2>
+          <p>Mentorship, mental wellness, education, and community programs. Each one continues something Mike has already done.</p>
+        </div>
+        <ul>
+          {programs.map((program) => (
+            <li key={program.title}>
+              <Link href={program.href}>
+                <span className="about-card-photo">
+                  <Image
+                    src={program.image.src}
+                    alt=""
+                    fill
+                    sizes="(min-width: 960px) 22vw, 100vw"
+                    style={{ objectPosition: program.image.objectPosition }}
+                  />
+                </span>
+                <h3>{program.title}</h3>
+                <p>{program.body}</p>
+              </Link>
             </li>
           ))}
-        </ol>
+        </ul>
       </section>
 
-      <section className="pillar-section" aria-labelledby="about-pillars">
-        <div className="section-intro">
-          <p className="eyebrow">Foundation pillars</p>
-          <h2 id="about-pillars">Four ways the mission shows up.</h2>
-          <p>Mental wellness, education and mentorship, basketball, and community.</p>
+      <section className="about-lovejoy" aria-labelledby="lovejoy-heading">
+        <div>
+          <p className="about-kicker">LoveJoy partnership</p>
+          <h2 id="lovejoy-heading">Making mental wellness part of the conversation.</h2>
+          <p>
+            LoveJoy Health is the foundation’s mental-health and care-access partner. Mike wants young people, athletes, and families to have a real next step after the conversation: resources, care navigation, and a path toward licensed support.
+          </p>
+          <p>Mind of a Champion is that conversation. The LoveJoy patient app is where people join Mike’s community and find support. In a crisis, call or text 988.</p>
+          <Link className="about-btn" href="/mental-health">
+            Explore mental health
+          </Link>
         </div>
-        <div className="pillar-grid">
-          {pillars.map((pillar) => (
-            <PillarCard key={pillar.href} {...pillar} />
+        <Image
+          className="about-lovejoy-mark"
+          src="/brand/lovejoy-health.png"
+          alt="LoveJoy Health"
+          width={981}
+          height={207}
+        />
+      </section>
+
+      <section className="about-impact" aria-labelledby="impact-heading">
+        <h2 id="impact-heading">The work in our communities.</h2>
+        <p className="about-impact-lede">
+          Youth served, scholarships, events, and programs will be published here once the numbers are verified.
+        </p>
+        <ul>
+          {marks.map((mark) => (
+            <li key={mark.title}>
+              <h3>{mark.title}</h3>
+              <p>{mark.body}</p>
+            </li>
           ))}
-        </div>
+        </ul>
       </section>
 
-      <EditorialSection
-        reverse
-        eyebrow="A bigger world"
-        title="Beyond the court."
-        paragraphs={[
-          "Basketball took Mike around the world. Those experiences shaped how he sees opportunity, community, and the responsibility that comes with having a platform.",
-        ]}
-        image={images.world}
-      />
-
-      <section className="band" aria-labelledby="archive-heading">
-        <div className="section-intro">
-          <p className="eyebrow">Photographs</p>
-          <h2 id="archive-heading">The person, not a stand-in.</h2>
-          <p>Career and community photographs of Mike James, including teammates from his season with the Timberwolves.</p>
-        </div>
-        <PhotoGallery images={archive} title="Photographs of Mike James" />
-      </section>
-
-      <section className="band" aria-labelledby="leadership-heading">
-        <div className="section-intro">
-          <p className="eyebrow">Leadership</p>
-          <h2 id="leadership-heading">Founder</h2>
-          <p>Michael Lamont James is the registered agent. Mike James is named as principal officer on the 2025 Form 990-N.</p>
-        </div>
-        <div className="leader-grid">
-          <article className="leader-card">
-            <h3>Mike James</h3>
-            <span>Founder</span>
-            <p>NBA Champion, coach, trainer, mentor, and community leader.</p>
-          </article>
-        </div>
-      </section>
-
-      <section className="band" aria-labelledby="board-heading">
-        <div className="section-intro">
-          <p className="eyebrow">Board & advisors</p>
-          <h2 id="board-heading">Members, not a published board.</h2>
+      <section className="about-close" aria-labelledby="close-heading">
+        <Image
+          src={images.ballArm.src}
+          alt=""
+          fill
+          sizes="100vw"
+          style={{ objectPosition: images.ballArm.objectPosition }}
+        />
+        <div className="about-close-shade" />
+        <div className="about-close-copy">
+          <h2 id="close-heading">Help us keep the work going.</h2>
           <p>
-            The Texas certificate of formation vests management in the members of the corporation. It does not name a board of directors.
+            Your support helps us reach more young people, strengthen our programs, and create more opportunities in the communities we serve.
           </p>
+          <div className="about-actions">
+            <Link className="about-btn" href="/donate">
+              Donate now
+            </Link>
+            <Link className="about-btn is-ghost" href="/get-involved">
+              Get involved
+            </Link>
+          </div>
         </div>
       </section>
-
-      <section className="band" aria-labelledby="partners-heading">
-        <div className="section-intro">
-          <p className="eyebrow">Partners</p>
-          <h2 id="partners-heading">LoveJoy Health</h2>
-          <p>
-            LoveJoy Health is the foundation&apos;s mental-health and care-access partner, connecting education and awareness with resources, care navigation, and pathways to professional support. The foundation is not a LoveJoy Health company, and the partnership is not emergency care.
-          </p>
-          <p>
-            Earlier community participation, including Hoodies 4 Healing and Mike James Day in Amityville, belongs to Mike&apos;s history. Those names are not listed here as current foundation contracts.
-          </p>
-          <TextLink href="/mental-health">Explore mental health & wellness</TextLink>
-        </div>
-      </section>
-    </>
+    </div>
   );
 }

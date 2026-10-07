@@ -2,7 +2,7 @@
 
 import { FormEvent, useState } from "react";
 import { donationAmounts, type GiftFrequency } from "@/content/involvement";
-import { submitDonation, type DonationDraft } from "@/lib/actions";
+import { submitDonation } from "@/lib/donate";
 
 const currency = new Intl.NumberFormat("en-US", {
   style: "currency",
@@ -19,7 +19,7 @@ export function DonationForm() {
   const [email, setEmail] = useState("");
   const [note, setNote] = useState("");
   const [error, setError] = useState("");
-  const [result, setResult] = useState<DonationDraft | null>(null);
+  const [pending, setPending] = useState(false);
 
   const amount = preset === "custom" ? Number(custom) : preset;
 
@@ -42,38 +42,21 @@ export function DonationForm() {
       return;
     }
     setError("");
-    const draft: DonationDraft = {
+    setPending(true);
+    const response = await submitDonation({
       frequency,
       amount,
       firstName: firstName.trim(),
       lastName: lastName.trim(),
       email: email.trim(),
       note: note.trim(),
-    };
-    const response = await submitDonation(draft);
+    });
     if (response.status === "redirect") {
       window.location.assign(response.url);
       return;
     }
-    setResult(response.draft);
-  }
-
-  if (result) {
-    return (
-      <div className="donate-result" role="status">
-        <p className="eyebrow">Gift prepared</p>
-        <h2>
-          {currency.format(result.amount)} {result.frequency === "monthly" ? "monthly" : "one-time"}
-        </h2>
-        <p>
-          Nothing was charged. Payment processing is not connected yet. This screen is the handoff for Stripe or
-          another giving provider — the amount, frequency, and donor fields are already collected.
-        </p>
-        <button type="button" className="btn btn-secondary" onClick={() => setResult(null)}>
-          Edit gift
-        </button>
-      </div>
-    );
+    setPending(false);
+    setError(response.status === "invalid" ? response.message : "Checkout could not be started.");
   }
 
   return (
@@ -162,17 +145,15 @@ export function DonationForm() {
         </p>
       ) : null}
 
-      <button type="submit" className="btn btn-primary">
-        Continue
+      <button type="submit" className="btn btn-primary" disabled={pending}>
+        {pending ? "Opening checkout" : "Donate"}
         <span className="sr-only">
           {" "}
-          with a {frequency === "monthly" ? "monthly" : "one-time"} gift
-          {Number.isFinite(amount) ? ` of ${currency.format(amount)}` : ""}
+          {frequency === "monthly" ? "monthly" : "once"}
+          {Number.isFinite(amount) ? `, ${currency.format(amount)}` : ""}
         </span>
       </button>
-      <p className="form-hint">
-        You will not be charged on this page. A payment provider can be connected later without redesigning the form.
-      </p>
+      <p className="form-hint">Card numbers are entered on the Stripe checkout page.</p>
     </form>
   );
 }

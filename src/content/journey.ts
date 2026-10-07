@@ -9,7 +9,7 @@ export const journey = [
     id: "duquesne",
     kicker: "Duquesne",
     title: "Student-athlete",
-    body: "Mike attended Duquesne University and graduated in 1998 with a degree in child psychology and communication. He was a first-team All-Atlantic 10 selection as a senior. The degree helps explain a long interest in young people. It is not a clinical license, and the foundation does not provide therapy.",
+    body: "Mike attended Duquesne University and graduated in 1998 with a degree in child psychology and communication. He was a first-team All-Atlantic 10 selection as a senior. The degree sits behind a long interest in young people. Licensed therapy stays with clinicians.",
   },
   {
     id: "pro",
@@ -21,7 +21,7 @@ export const journey = [
     id: "champion",
     kicker: "2004",
     title: "NBA Champion",
-    body: "An NBA Championship with the Detroit Pistons. The title is a chapter. It is not the identity of the foundation.",
+    body: "An NBA Championship with the Detroit Pistons in 2004. Coaching, school, and community are the work the foundation carries forward.",
   },
   {
     id: "experience",

@@ -59,10 +59,15 @@ export const pageSeo = {
     description:
       "Get involved with the Mike James Foundation. Donate, volunteer, mentor, or bring youth mental wellness and basketball programs to your school or community.",
   },
+  contact: {
+    title: "Contact",
+    description:
+      "Contact the Mike James Foundation about volunteering, mentorship, partnerships, programs, schools, and athlete appearances.",
+  },
   donate: {
     title: "Donate",
     description:
-      "How a gift supports the Mike James Foundation's youth mental wellness, mentorship, basketball, and community programs. This website does not collect payment.",
+      "Gifts to the Mike James Foundation for youth mental wellness, mentorship, basketball, and community programs. Checkout is handled by Stripe.",
   },
   mentalHealth: {
     title: "Mind of a Champion | Mike James Foundation × LoveJoy Health",

@@ -5,11 +5,13 @@ export function JourneyTimeline() {
     <ol className="journey">
       {journey.map((item) => (
         <li key={item.id}>
-          <p className="journey-kicker">{item.kicker}</p>
-          <div>
-            <h3>{item.title}</h3>
+          <details>
+            <summary>
+              <span className="journey-kicker">{item.kicker}</span>
+              <span className="journey-title">{item.title}</span>
+            </summary>
             <p>{item.body}</p>
-          </div>
+          </details>
         </li>
       ))}
     </ol>

@@ -1,0 +1,543 @@
+.about-redesign {
+  background: #f3efe6;
+  color: #161616;
+}
+
+.about-kicker {
+  margin: 0 0 0.85rem;
+  color: var(--gold-bright);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.about-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(18rem, 0.95fr);
+  align-items: stretch;
+  min-height: 100vh;
+  padding: calc(var(--header-h) + 1.5rem) 0 0 var(--gutter);
+  background: #090b0e;
+  color: var(--cream);
+}
+
+.about-hero-copy {
+  align-self: center;
+  max-width: 38rem;
+  padding-bottom: clamp(2rem, 6vh, 4rem);
+}
+
+.about-hero h1,
+.about-people h2,
+.about-journey h2,
+.about-why h2,
+.about-impact h2,
+.about-programs h2,
+.about-lovejoy h2,
+.about-close h2 {
+  font-family: var(--display);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.about-hero h1 {
+  font-size: clamp(4.2rem, 7.4vw, 6.6rem);
+}
+
+.about-hero-copy > p {
+  max-width: 34rem;
+  margin-top: 1.35rem;
+  color: rgba(244, 240, 231, 0.82);
+  font-size: 1.05rem;
+}
+
+.about-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.8rem;
+}
+
+.about-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.9rem;
+  padding: 0.65rem 1.35rem;
+  background: var(--gold);
+  color: #16120b;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.about-btn.is-ghost {
+  background: transparent;
+  color: var(--cream);
+  border: 1px solid rgba(224, 192, 107, 0.85);
+}
+
+.about-btn:hover {
+  background: var(--gold-bright);
+}
+
+.about-btn.is-ghost:hover {
+  background: rgba(224, 192, 107, 0.12);
+  color: var(--cream);
+}
+
+.about-hero-photo {
+  position: relative;
+  min-height: 100%;
+}
+
+.about-hero-photo img {
+  object-fit: cover;
+}
+
+.about-hero-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, #090b0e 0%, rgba(9, 11, 14, 0.35) 16%, transparent 34%),
+    linear-gradient(to top, rgba(9, 11, 14, 0.35), transparent 22%);
+  pointer-events: none;
+}
+
+.about-sign,
+.about-script {
+  font-family: var(--script);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1;
+  text-transform: none;
+}
+
+.about-sign {
+  position: absolute;
+  right: 8%;
+  bottom: 8%;
+  z-index: 1;
+  color: var(--gold-bright);
+  font-size: clamp(2.4rem, 4vw, 3.4rem);
+}
+
+.about-focus {
+  background: #090b0e;
+  color: var(--cream);
+  padding: 0 var(--gutter) clamp(3rem, 6vw, 4.5rem);
+}
+
+.about-focus ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  width: min(100%, var(--max));
+  margin: 0 auto;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(244, 240, 231, 0.14);
+}
+
+.about-focus svg {
+  color: var(--gold-bright);
+}
+
+.about-focus h2 {
+  margin: 0.85rem 0 0.4rem;
+  font-family: var(--display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.about-focus p {
+  color: rgba(244, 240, 231, 0.72);
+  font-size: 0.95rem;
+}
+
+.about-people {
+  display: grid;
+  grid-template-columns: 0.92fr 1.08fr;
+  gap: clamp(1.5rem, 4vw, 4rem);
+  align-items: center;
+  width: min(100% - var(--gutter) * 2, var(--max));
+  margin: 0 auto;
+  padding: clamp(4rem, 8vw, 6.5rem) 0;
+}
+
+.about-people-photo {
+  position: relative;
+  min-height: 36rem;
+}
+
+.about-people-photo img:not(.about-people-mark) {
+  object-fit: cover;
+}
+
+.about-people-mark {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  z-index: 1;
+  width: 4.2rem;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.35));
+}
+
+.about-people .about-kicker {
+  color: #8a6a2c;
+}
+
+.about-people h2,
+.about-journey h2,
+.about-why h2,
+.about-impact h2,
+.about-programs h2,
+.about-lovejoy h2 {
+  font-size: clamp(3.2rem, 5.5vw, 4.8rem);
+}
+
+.about-why h2,
+.about-programs h2,
+.about-lovejoy h2,
+.about-impact h2,
+.about-close h2 {
+  max-width: 14ch;
+}
+
+.about-people-copy p {
+  max-width: 36rem;
+  margin-top: 1rem;
+  color: #3c3832;
+}
+
+.about-script {
+  margin-top: 1.6rem;
+  color: #8a6a2c;
+  font-size: clamp(2.4rem, 4vw, 3.3rem);
+}
+
+.about-journey {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  background: #f7f4ee;
+}
+
+.about-journey-copy {
+  padding: clamp(3.5rem, 7vw, 5.5rem) var(--gutter);
+}
+
+.about-journey-lede {
+  max-width: 28rem;
+  margin: 1.2rem 0 1.8rem;
+  color: #3c3832;
+}
+
+.about-journey li {
+  display: grid;
+  grid-template-columns: 7.5rem 1fr;
+  gap: 1rem;
+  padding: 1.05rem 0;
+  border-top: 1px solid rgba(22, 22, 22, 0.12);
+}
+
+.about-journey li span {
+  color: #8a6a2c;
+  font-family: var(--display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.about-journey h3 {
+  font-family: var(--display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.about-journey li p {
+  margin-top: 0.25rem;
+  color: #3c3832;
+  font-size: 0.98rem;
+}
+
+.about-journey-photo {
+  position: relative;
+  min-height: 40rem;
+}
+
+.about-journey-photo img {
+  object-fit: cover;
+}
+
+.about-why,
+.about-lovejoy {
+  width: min(100% - var(--gutter) * 2, var(--max));
+  margin: 0 auto;
+  padding: clamp(3.5rem, 7vw, 5.5rem) 0;
+}
+
+.about-why .about-kicker,
+.about-lovejoy .about-kicker {
+  color: #8a6a2c;
+}
+
+.about-why p,
+.about-lovejoy p {
+  max-width: 42rem;
+  margin-top: 1.1rem;
+  color: #3c3832;
+}
+
+.about-lovejoy {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: center;
+}
+
+.about-lovejoy .about-btn {
+  margin-top: 1.6rem;
+}
+
+.about-lovejoy-mark {
+  width: min(100%, 22rem);
+  height: auto;
+}
+
+.about-impact {
+  padding: clamp(4rem, 8vw, 6rem) var(--gutter);
+  background: #fbf9f4;
+  text-align: center;
+}
+
+.about-impact h2 {
+  margin-inline: auto;
+}
+
+.about-impact-lede {
+  max-width: 36rem;
+  margin: 1.2rem auto 0;
+  color: #3c3832;
+  font-size: 1.05rem;
+}
+
+.about-impact ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  width: min(100%, var(--max));
+  margin: clamp(2.5rem, 5vw, 3.5rem) auto 0;
+  text-align: left;
+}
+
+.about-impact h3 {
+  font-family: var(--display);
+  font-size: clamp(1.6rem, 2.4vw, 2.1rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.about-impact li {
+  padding-top: 1rem;
+  border-top: 2px solid #c5a052;
+}
+
+.about-impact p {
+  margin-top: 0.7rem;
+  color: #3c3832;
+  font-size: 0.98rem;
+}
+
+.about-programs {
+  padding: clamp(3.5rem, 7vw, 5.5rem) var(--gutter) clamp(4.5rem, 8vw, 6.5rem);
+}
+
+.about-programs-intro {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 2rem;
+  align-items: end;
+  width: min(100%, var(--max));
+  margin: 0 auto 2rem;
+}
+
+.about-programs-intro p {
+  max-width: 28rem;
+  color: #3c3832;
+  padding-bottom: 0.4rem;
+}
+
+.about-programs ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  width: min(100%, var(--max));
+  margin: 0 auto;
+}
+
+.about-programs a {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.about-card-photo {
+  position: relative;
+  display: block;
+  aspect-ratio: 4 / 5;
+  background: #1b2028;
+}
+
+.about-card-photo img {
+  object-fit: cover;
+}
+
+.about-programs h3 {
+  font-family: var(--display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.about-programs li p {
+  color: #3c3832;
+  font-size: 0.95rem;
+}
+
+.about-programs a:hover h3 {
+  color: #8a6a2c;
+}
+
+.about-close {
+  position: relative;
+  display: grid;
+  align-items: end;
+  min-height: 78vh;
+  padding: clamp(3rem, 8vw, 5rem) var(--gutter);
+  color: var(--cream);
+  overflow: hidden;
+}
+
+.about-close > img {
+  object-fit: cover;
+}
+
+.about-close-shade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to top, rgba(9, 11, 14, 0.82), rgba(9, 11, 14, 0.28) 55%, rgba(9, 11, 14, 0.45)),
+    linear-gradient(90deg, rgba(9, 11, 14, 0.55), transparent 60%);
+}
+
+.about-close-copy,
+.about-close-script {
+  position: relative;
+  z-index: 1;
+}
+
+.about-close-copy {
+  max-width: 40rem;
+}
+
+.about-close h2 {
+  font-size: clamp(3.6rem, 7vw, 6rem);
+}
+
+.about-close-copy > p {
+  max-width: 28rem;
+  margin-top: 1rem;
+  color: rgba(244, 240, 231, 0.86);
+}
+
+.about-close-script {
+  position: absolute;
+  right: var(--gutter);
+  bottom: clamp(2rem, 6vh, 3.5rem);
+  z-index: 1;
+  max-width: 12ch;
+  color: var(--gold-bright);
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  text-align: right;
+}
+
+@media (max-width: 1100px) {
+  .about-hero,
+  .about-people,
+  .about-journey,
+  .about-lovejoy,
+  .about-programs-intro {
+    grid-template-columns: 1fr;
+  }
+
+  .about-hero {
+    padding-right: var(--gutter);
+  }
+
+  .about-hero-photo {
+    min-height: 58vw;
+    margin-top: 1.5rem;
+  }
+
+  .about-focus ul,
+  .about-programs ul {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .about-impact ul {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .about-people-photo,
+  .about-journey-photo {
+    min-height: 26rem;
+  }
+
+  .about-journey-photo {
+    order: -1;
+  }
+}
+
+@media (max-width: 720px) {
+  .about-hero h1 {
+    font-size: clamp(3.2rem, 14vw, 4.4rem);
+  }
+
+  .about-focus ul,
+  .about-impact ul,
+  .about-programs ul {
+    grid-template-columns: 1fr;
+  }
+
+  .about-journey li {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+
+  .about-close-script {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    margin-top: 2rem;
+    text-align: left;
+  }
+
+  .about-sign {
+    right: 1rem;
+    bottom: 1rem;
+  }
+}

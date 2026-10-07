@@ -5,8 +5,8 @@ export default function NotFound() {
     <section className="cta-section">
       <div className="cta-copy">
         <p className="eyebrow">404</p>
-        <h1>That page is not on the floor.</h1>
-        <p>The link may be old, or the page has not been published.</p>
+        <h1>We can&apos;t find that page.</h1>
+        <p>The link may be old, or the page has moved.</p>
         <div className="hero-actions">
           <ButtonLink href="/">Back home</ButtonLink>
           <ButtonLink href="/programs" variant="secondary">

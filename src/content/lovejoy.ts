@@ -32,7 +32,7 @@ export const lovejoyScreens: {
   },
   community: {
     src: "/brand/lovejoy-porch.png",
-    alt: "The Porch in the LoveJoy patient app, where people join communities. The circles on screen are examples, not a live view of Mike James' community.",
+    alt: "The Porch in the LoveJoy patient app, where people join communities. The circles on screen are sample communities.",
     width: 340,
     height: 800,
   },

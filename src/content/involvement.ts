@@ -19,49 +19,49 @@ export const pathways: Pathway[] = [
     id: "volunteer",
     title: "Volunteer",
     summary: "Show up for events, camps, and community days.",
-    href: "/get-involved#volunteer",
+    href: "/contact?interest=volunteer#contact-form",
     cta: "Offer your time",
   },
   {
     id: "mentor",
     title: "Become a mentor",
     summary: "Walk with a young person. Matching starts only after screening is in place.",
-    href: "/get-involved#mentor",
+    href: "/contact?interest=mentor#contact-form",
     cta: "Start a conversation",
   },
   {
     id: "corporate",
     title: "Corporate partnerships",
     summary: "Sponsor a program, fund a community day, or bring your team alongside this work.",
-    href: "/get-involved#corporate",
+    href: "/contact?interest=corporate#contact-form",
     cta: "Talk partnership",
   },
   {
     id: "program",
     title: "Bring a program to your community",
     summary: "Schools, teams, and organizations can ask about hosting Mind of a Champion or the Basketball Experience.",
-    href: "/get-involved#program",
+    href: "/contact?interest=program#contact-form",
     cta: "Request a program",
   },
   {
     id: "schools",
     title: "Schools & organizations",
     summary: "Build programming with educators, athletic departments, and youth organizations.",
-    href: "/get-involved#schools",
+    href: "/contact?interest=schools#contact-form",
     cta: "Connect",
   },
   {
     id: "community-org",
     title: "Community organizations",
     summary: "Partner on resources, events, and support that meet families where they are.",
-    href: "/get-involved#community-org",
+    href: "/contact?interest=community-org#contact-form",
     cta: "Partner locally",
   },
   {
     id: "athletes",
     title: "Athletes",
-    summary: "Lend your voice, your time, or a visit. Guest appearances are scheduled, not assumed.",
-    href: "/get-involved#athletes",
+    summary: "Lend your voice, your time, or a visit. Appearances are set with the foundation ahead of time.",
+    href: "/contact?interest=athletes#contact-form",
     cta: "Raise your hand",
   },
 ];
@@ -76,17 +76,9 @@ export const homepagePathways = homepageOrder.map((id) => {
   return { ...pathway, title };
 });
 
-export const interestOptions = [
-  { id: "volunteer", label: "Volunteer" },
-  { id: "mentor", label: "Become a mentor" },
-  { id: "corporate", label: "Corporate partnership" },
-  { id: "program", label: "Bring a program to my community" },
-  { id: "schools", label: "School or organization" },
-  { id: "community-org", label: "Community organization" },
-  { id: "athletes", label: "Athlete" },
-  { id: "camp", label: "Basketball Experience updates" },
-  { id: "general", label: "General question" },
-] as const;
+export const interestOptions = pathways
+  .filter((pathway) => pathway.id !== "donate")
+  .map((pathway) => ({ id: pathway.id, label: pathway.title }));
 
 export type InterestId = (typeof interestOptions)[number]["id"];
 

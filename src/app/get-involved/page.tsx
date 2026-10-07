@@ -17,7 +17,7 @@ export default function GetInvolvedPage() {
       <PageHero
         eyebrow="Get involved"
         title="The next chapter takes all of us."
-        lede="This work did not start from zero. It still takes partners, volunteers, mentors, and people willing to give. Choose a way in."
+        lede="This work has been going on for years. It still takes partners, volunteers, mentors, and people willing to give. Choose a way in."
         image={images.community}
         compact
       />
@@ -28,7 +28,7 @@ export default function GetInvolvedPage() {
             <article key={pathway.id} id={pathway.id} className="pathway-block">
               <h2>{pathway.title}</h2>
               <p>{pathway.summary}</p>
-              {pathway.href === "/donate" ? <TextLink href={pathway.href}>{pathway.cta}</TextLink> : null}
+              <TextLink href={pathway.href}>{pathway.cta}</TextLink>
             </article>
           ))}
         </div>

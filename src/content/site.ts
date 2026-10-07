@@ -22,6 +22,7 @@ export const footerExplore: LinkItem[] = [
   { label: "About", href: "/about" },
   { label: "Our Impact", href: "/impact" },
   { label: "Get Involved", href: "/get-involved" },
+  { label: "Contact", href: "/contact" },
   { label: "Donate", href: "/donate" },
   { label: "Mental health & wellness", href: "/mental-health" },
 ];
@@ -66,7 +67,7 @@ export const legal = {
 };
 
 export const crisisNote =
-  "If you or someone you know is in crisis, contact local emergency services or call or text 988 in the United States to reach the Suicide & Crisis Lifeline. Mind of a Champion and the LoveJoy Health partnership are not emergency services and are not a substitute for professional care.";
+  "If you or someone you know is in crisis, contact local emergency services or call or text 988 in the United States to reach the Suicide & Crisis Lifeline. Mind of a Champion and LoveJoy Health are for learning and finding ongoing support.";
 
 export const mission =
   "The Mike James Foundation empowers young people, athletes and families through mental wellness, mentorship, sports and community programs that build resilience, expand opportunity and create stronger futures.";
@@ -85,7 +86,7 @@ export const values = [
   },
   {
     title: "Discipline",
-    body: "Work ethic is a value, not a slogan. Showing up, doing the work, and staying with it.",
+    body: "Showing up, doing the work, and staying with it.",
   },
   {
     title: "Respect",

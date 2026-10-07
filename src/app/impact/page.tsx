@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { ImpactStat } from "@/components/ImpactStat";
 import { PageHero } from "@/components/PageHero";
 import { featuredImpact } from "@/content/impact";
@@ -25,7 +26,6 @@ export default function ImpactPage() {
         <div className="section-intro is-center">
           <p className="eyebrow">Impact overview</p>
           <h2 id="impact-overview">{featuredImpact.headline}</h2>
-          <p>{featuredImpact.body}</p>
         </div>
         {featuredImpact.stats.length > 0 ? (
           <div className="impact-grid">
@@ -37,7 +37,9 @@ export default function ImpactPage() {
           <ul className="qual-grid">
             {featuredImpact.statements.map((statement) => (
               <li key={statement.id}>
-                <h3>{statement.title}</h3>
+                <h3>
+                  {statement.href ? <Link href={statement.href}>{statement.title}</Link> : statement.title}
+                </h3>
                 <p>{statement.body}</p>
               </li>
             ))}

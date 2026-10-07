@@ -15,6 +15,7 @@ export type ImpactStatement = {
   id: string;
   title: string;
   body: string;
+  href?: string;
 };
 
 export const featuredImpact: {
@@ -30,8 +31,8 @@ export const featuredImpact: {
   placeholder: true,
   note: "No impact totals are published yet. Figures will appear here only after they are verified.",
   eyebrow: "Our impact",
-  headline: "What we will account for",
-  body: "Community impact should be more than a promise. As this chapter grows, the foundation will measure people reached, opportunities created, and connections to support. Those counts are not invented in the meantime.",
+  headline: "The work in our communities.",
+  body: "Mentorship, mental wellness, education, basketball, and community. This is how the foundation shows up for young people and families. LoveJoy Health is the care-access partner for Mind of a Champion.",
   stats: [],
   statements: [
     {
@@ -50,9 +51,10 @@ export const featuredImpact: {
       body: "Basketball as a classroom for discipline, character, and life off the court.",
     },
     {
-      id: "community",
-      title: "Showing up",
-      body: "Neighborhoods, families, and the tradition of Mike James Day.",
+      id: "lovejoy",
+      title: "LoveJoy Health",
+      body: "The care-access partner for Mind of a Champion. Resources, care navigation, and a path toward licensed support.",
+      href: "/mental-health",
     },
   ],
 };
@@ -84,7 +86,7 @@ export const impactAreas: ImpactArea[] = [
   {
     id: "wellness",
     title: "Mental wellness",
-    summary: "Education, conversations, and connections toward professional support. Not clinical outcomes.",
+    summary: "Education, conversations, and connections toward professional support.",
     metrics: [],
     emptyLabel: "Program activity will be reported here without medical claims.",
   },
