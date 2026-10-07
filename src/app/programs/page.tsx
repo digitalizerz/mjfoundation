@@ -67,9 +67,9 @@ export default function ProgramsPage() {
 
       <CTASection
         title="Bring the work to your community."
-        body="Schools, teams, and organizations can ask about hosting a program. Dates are set when a partnership is real."
+        body="Schools, teams, and organizations can host a program."
         actions={[
-          { label: "Start a conversation", href: "/get-involved?interest=program#interest-form", variant: "primary" },
+          { label: "Get involved", href: "/get-involved", variant: "primary" },
           { label: "Donate", href: "/donate", variant: "secondary" },
         ]}
       />

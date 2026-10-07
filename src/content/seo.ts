@@ -1,4 +1,4 @@
-import { legal, site } from "./site";
+import { legal, site, socialLinks } from "./site";
 
 /**
  * Search language drawn from how athlete and mental-health foundations
@@ -62,7 +62,7 @@ export const pageSeo = {
   donate: {
     title: "Donate",
     description:
-      "Donate to the Mike James Foundation to support youth mental wellness, mentorship, basketball, and community programs.",
+      "How a gift supports the Mike James Foundation's youth mental wellness, mentorship, basketball, and community programs. This website does not collect payment.",
   },
   mentalHealth: {
     title: "Mind of a Champion | Mike James Foundation × LoveJoy Health",
@@ -98,6 +98,7 @@ export function organizationJsonLd() {
           jobTitle: "Founder",
         },
         areaServed: "United States",
+        sameAs: socialLinks.flatMap((link) => (link.href ? [link.href] : [])),
         knowsAbout: [
           "Athlete mental health",
           "Student-athlete mental health",

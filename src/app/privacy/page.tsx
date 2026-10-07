@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-
 import { pageSeo } from "@/content/seo";
 
 export const metadata: Metadata = {
@@ -11,10 +10,12 @@ export const metadata: Metadata = {
 export default function PrivacyPage() {
   return (
     <article className="legal-page article">
-      <p className="eyebrow">Placeholder</p>
       <h1>Privacy</h1>
       <p>
-        A privacy policy will be published here before the site collects donations, newsletter addresses, or inquiry messages. The forms on this site do not store or transmit what you type.
+        The Mike James Foundation website does not collect donations, newsletter addresses, or contact-form messages, and it does not ask you to create an account.
+      </p>
+      <p>
+        Links to Instagram and LoveJoy Health leave this site. Those organizations handle any information you give them under their own policies.
       </p>
     </article>
   );

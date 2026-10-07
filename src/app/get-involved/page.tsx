@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { InterestForm } from "@/components/InterestForm";
 import { PageHero } from "@/components/PageHero";
 import { TextLink } from "@/components/TextLink";
 import { images } from "@/content/images";
@@ -12,13 +11,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/get-involved" },
 };
 
-export default async function GetInvolvedPage({
-  searchParams,
-}: {
-  searchParams: Promise<{ interest?: string }>;
-}) {
-  const { interest } = await searchParams;
-
+export default function GetInvolvedPage() {
   return (
     <>
       <PageHero
@@ -35,23 +28,12 @@ export default async function GetInvolvedPage({
             <article key={pathway.id} id={pathway.id} className="pathway-block">
               <h2>{pathway.title}</h2>
               <p>{pathway.summary}</p>
-              <TextLink href={pathway.href}>{pathway.cta}</TextLink>
+              {pathway.href === "/donate" ? <TextLink href={pathway.href}>{pathway.cta}</TextLink> : null}
             </article>
           ))}
         </div>
       </section>
 
-      <section className="involve-layout" aria-labelledby="interest-heading">
-        <div className="involve-copy">
-          <p className="eyebrow">Contact</p>
-          <h2 id="interest-heading">Tell us where you fit.</h2>
-          <p>
-            Volunteers, mentors, schools, companies, athletes, and neighborhood organizations can all start here. Giving has its own page.
-          </p>
-          <TextLink href="/donate">Go to donate</TextLink>
-        </div>
-        <InterestForm initialInterest={interest} />
-      </section>
     </>
   );
 }

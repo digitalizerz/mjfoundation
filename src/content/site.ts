@@ -42,16 +42,9 @@ export const roles = [
   "Community Leader",
 ] as const;
 
-/**
- * PLACEHOLDER social profiles.
- * Replace `href` with the official profile URL and set placeholder to false.
- * Null href renders as text, not a dead link.
- */
-export const socialLinks: { label: string; href: string | null; placeholder: true }[] = [
-  { label: "Instagram", href: null, placeholder: true },
-  { label: "Facebook", href: null, placeholder: true },
-  { label: "LinkedIn", href: null, placeholder: true },
-  { label: "YouTube", href: null, placeholder: true },
+/** Official profiles. Null href renders as text, not a dead link. */
+export const socialLinks: { label: string; href: string | null }[] = [
+  { label: "Instagram", href: "https://www.instagram.com/who_mikejames13/" },
 ];
 
 export const legal = {

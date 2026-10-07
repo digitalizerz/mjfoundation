@@ -125,7 +125,7 @@ export const programs: Program[] = [
     },
     secondaryCta: {
       label: "Bring Mind of a Champion to your organization",
-      href: "/get-involved?interest=program#interest-form",
+      href: "/get-involved",
     },
     gallery: [images.mind, images.pillarMind, images.classroom, images.partnership],
     video: {
@@ -156,8 +156,8 @@ export const programs: Program[] = [
       {
         type: "areas",
         eyebrow: "What the work includes",
-        title: "Programming, ready to be hosted.",
-        intro: "These are the intended parts of Mind of a Champion. Specific dates, hosts, and formats will be confirmed as partnerships are set.",
+        title: "What the program holds.",
+        intro: "These are the parts of Mind of a Champion.",
         items: [
           {
             title: "Athlete conversations",
@@ -208,14 +208,14 @@ export const programs: Program[] = [
     ],
     cta: { label: "Explore the Basketball Experience", href: "/programs/basketball-experience" },
     secondaryCta: {
-      label: "Experience updates",
-      href: "/get-involved?interest=camp#interest-form",
+      label: "Get involved",
+      href: "/get-involved",
     },
     gallery: [images.camp, images.story, images.portrait, images.brotherhood],
     video: {
       poster: images.story,
       src: null,
-      caption: "Program film will be added here.",
+      caption: "From the floor.",
     },
     blocks: [
       {
@@ -263,13 +263,13 @@ export const programs: Program[] = [
         title: "A camp can live here. It is not the whole program.",
         paragraphs: [
           "A Mike James Championship Camp may return as one gathering inside the Basketball Experience: instruction, mentorship, leadership, and conversations about life beyond the game.",
-          "No camp date, city, or guest list is live on this site. When one is confirmed, it will be published here.",
+          "No camp date, city, or guest list is published on this site.",
         ],
       },
       {
         type: "gallery",
         title: "Mike, in the game",
-        intro: "Career photographs of Mike James. Youth-session photography will be added when a new experience is held.",
+        intro: "Career photographs of Mike James.",
       },
       { type: "video", title: "From the floor" },
       {
@@ -294,7 +294,7 @@ export const programs: Program[] = [
     areas: [
       {
         title: "Mentorship",
-        description: "Consistent adults. Matching and screening will be defined before anyone is introduced.",
+        description: "A consistent adult. Screening comes before anyone is matched.",
       },
       {
         title: "College preparation",
@@ -316,7 +316,7 @@ export const programs: Program[] = [
     cta: { label: "Explore education & mentorship", href: "/programs/education-mentorship" },
     secondaryCta: {
       label: "Become a mentor",
-      href: "/get-involved?interest=mentor#interest-form",
+      href: "/get-involved",
     },
     gallery: [images.pillarYouth, images.classroom, images.youthCircle],
     video: null,
@@ -365,7 +365,6 @@ export const programs: Program[] = [
         title: "History, not an open application.",
         paragraphs: [
           "The scholarship fund is part of Mike's record. This page does not announce scholarships currently available.",
-          "If the foundation opens awards again, the criteria, amounts, and dates will be published here first.",
         ],
       },
     ],
@@ -394,7 +393,7 @@ export const programs: Program[] = [
     cta: { label: "Explore Mike James Day", href: "/programs/mike-james-day" },
     secondaryCta: {
       label: "Partner on Mike James Day",
-      href: "/get-involved?interest=community-org#interest-form",
+      href: "/get-involved",
     },
     gallery: [images.community, images.pillarYouth, images.youthCircle, images.runners],
     video: null,
@@ -406,7 +405,6 @@ export const programs: Program[] = [
         paragraphs: [
           "Mike hosted Mike James Day in Amityville, New York, a community event for local residents. Showing up for a neighborhood was already part of how he used his platform.",
           "The foundation's Mike James Day is that tradition, widened: basketball, family, wellness, and community in one day. He has also stood with efforts such as Hoodies 4 Healing. That photograph is participation, not a claim that the foundation runs those organizations.",
-          "The next date and city will be announced when they are real.",
         ],
         image: images.community,
       },

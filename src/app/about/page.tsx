@@ -130,8 +130,8 @@ export default function AboutPage() {
       <section className="band" aria-labelledby="leadership-heading">
         <div className="section-intro">
           <p className="eyebrow">Leadership</p>
-          <h2 id="leadership-heading">Founder first. The rest, when named.</h2>
-          <p>Staff profiles will replace the open seats. This page does not invent an executive team. Michael Lamont James is the registered agent. Mike James is named as principal officer on the 2025 Form 990-N.</p>
+          <h2 id="leadership-heading">Founder</h2>
+          <p>Michael Lamont James is the registered agent. Mike James is named as principal officer on the 2025 Form 990-N.</p>
         </div>
         <div className="leader-grid">
           <article className="leader-card">
@@ -139,12 +139,6 @@ export default function AboutPage() {
             <span>Founder</span>
             <p>NBA Champion, coach, trainer, mentor, and community leader.</p>
           </article>
-          {["Executive leadership", "Program leadership", "Operations"].map((seat) => (
-            <article key={seat} className="leader-card">
-              <h3>{seat}</h3>
-              <span>Profile forthcoming</span>
-            </article>
-          ))}
         </div>
       </section>
 
@@ -153,18 +147,15 @@ export default function AboutPage() {
           <p className="eyebrow">Board & advisors</p>
           <h2 id="board-heading">Members, not a published board.</h2>
           <p>
-            The Texas certificate of formation vests management in the members of the corporation. It does not name a board of directors. Directors and advisors will be listed here only if that structure is changed and the appointments are public.
+            The Texas certificate of formation vests management in the members of the corporation. It does not name a board of directors.
           </p>
-        </div>
-        <div className="empty-panel">
-          <p>Member directory forthcoming. No directors are named in the certificate of formation.</p>
         </div>
       </section>
 
       <section className="band" aria-labelledby="partners-heading">
         <div className="section-intro">
           <p className="eyebrow">Partners</p>
-          <h2 id="partners-heading">Named when the agreement is real.</h2>
+          <h2 id="partners-heading">LoveJoy Health</h2>
           <p>
             LoveJoy Health is the foundation&apos;s mental-health and care-access partner, connecting education and awareness with resources, care navigation, and pathways to professional support. The foundation is not a LoveJoy Health company, and the partnership is not emergency care.
           </p>
@@ -172,9 +163,6 @@ export default function AboutPage() {
             Earlier community participation, including Hoodies 4 Healing and Mike James Day in Amityville, belongs to Mike&apos;s history. Those names are not listed here as current foundation contracts.
           </p>
           <TextLink href="/mental-health">Explore mental health & wellness</TextLink>
-        </div>
-        <div className="empty-panel">
-          <p>Additional partners and sponsors will be recognized here. None are listed until an agreement is public.</p>
         </div>
       </section>
     </>

@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
-import { DonationForm } from "@/components/DonationForm";
 import { PageHero } from "@/components/PageHero";
 import { images } from "@/content/images";
-
 import { pageSeo } from "@/content/seo";
 
 export const metadata: Metadata = {
@@ -17,19 +15,13 @@ export default function DonatePage() {
       <PageHero
         eyebrow="Donate"
         title="Fuel what happens next."
-        lede="A gift supports mental wellness, mentorship, basketball, and community programs. Payment is not processed on this site yet."
+        lede="Gifts support mental wellness, mentorship, basketball, and community programs. This website does not collect payment."
         image={images.ballArm}
         compact
       />
-      <section className="donate-layout">
-        <div className="donate-aside">
-          <h2>Give in a way that fits.</h2>
-          <p>Choose one-time or monthly, then an amount. $25, $50, $100, $250, $500, or a custom gift.</p>
-          <p>
-            When a provider such as Stripe is connected, this form can open a secure checkout without a redesign. Until then, nothing is charged and no card details are collected. Gifts are not described on this site as tax-deductible.
-          </p>
-        </div>
-        <DonationForm />
+      <section className="page-section article">
+        <h2>Giving</h2>
+        <p>Card details are not collected here, and no gift is processed on this site. Gifts are not described as tax-deductible.</p>
       </section>
     </>
   );

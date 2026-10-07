@@ -76,7 +76,7 @@ export function ProgramView({ program }: { program: Program }) {
           );
         }
 
-        if (block.type === "video" && program.video) {
+        if (block.type === "video" && program.video?.src) {
           return (
             <section key={block.title} className="band">
               <div className="section-intro">
@@ -87,25 +87,21 @@ export function ProgramView({ program }: { program: Program }) {
           );
         }
 
-        if (block.type === "schedule") {
+        if (block.type === "schedule" && block.items.length > 0) {
           return (
             <section key={block.title} className="band band-cream">
               <div className="section-intro">
                 <h2>{block.title}</h2>
                 <p>{block.intro}</p>
               </div>
-              {block.items.length === 0 ? (
-                <p className="empty-state">{block.empty}</p>
-              ) : (
-                <ul className="schedule-list">
-                  {block.items.map((item) => (
-                    <li key={item.title}>
-                      <strong>{item.title}</strong>
-                      <span>{item.detail}</span>
-                    </li>
-                  ))}
-                </ul>
-              )}
+              <ul className="schedule-list">
+                {block.items.map((item) => (
+                  <li key={item.title}>
+                    <strong>{item.title}</strong>
+                    <span>{item.detail}</span>
+                  </li>
+                ))}
+              </ul>
               {program.secondaryCta ? (
                 <div className="band-actions">
                   <ButtonLink href={program.secondaryCta.href}>{program.secondaryCta.label}</ButtonLink>

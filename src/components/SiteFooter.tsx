@@ -1,8 +1,6 @@
 import Link from "next/link";
 import { footerExplore, footerPrograms, legal, site, socialLinks } from "@/content/site";
 import { Logo } from "./Logo";
-import { NewsletterForm } from "./NewsletterForm";
-
 export function SiteFooter() {
   const year = new Date().getFullYear();
 
@@ -44,7 +42,9 @@ export function SiteFooter() {
             {socialLinks.map((link) => (
               <li key={link.label}>
                 {link.href ? (
-                  <a href={link.href}>{link.label}</a>
+                  <a href={link.href} target="_blank" rel="noopener noreferrer">
+                    {link.label}
+                  </a>
                 ) : (
                   <span>
                     {link.label}
@@ -55,14 +55,6 @@ export function SiteFooter() {
             ))}
           </ul>
         </div>
-      </div>
-
-      <div className="footer-news">
-        <div>
-          <h2>Newsletter</h2>
-          <p>Program notes and ways to show up. Sent when there is something worth sending.</p>
-        </div>
-        <NewsletterForm />
       </div>
 
       <div className="footer-legal">
